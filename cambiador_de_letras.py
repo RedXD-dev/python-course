@@ -30,6 +30,5 @@ for d in lista_impar:
         lista.pop(index)
         lista.insert(index,d)
     index+=2
-for e in lista:
-    
+for e in lista: 
     print(e,end="")
