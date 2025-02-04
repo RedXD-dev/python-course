@@ -1,9 +1,13 @@
 lista=[]
-lista1=[0,0,0,0,0,0,0,0,0,0]
+lista1=[]
+numero=int(input("Ingrese el tamaño de la lista:"))
+for i in range(numero):
+    lista1.append(0)
+lista1.append(0)
 number=0
 contador=0
 while number!='-1':
-    number=(input("Ingrese un numero '0-9' (o escribe '-1' para terminar):"))
+    number=(input("Ingrese un numero (o escribe '-1' para terminar):"))
     lista.append(number)
 lista.remove('-1')
 for a in lista:
