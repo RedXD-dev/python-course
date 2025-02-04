@@ -13,5 +13,4 @@ for e in lista:
     cosa=ord(e)-ord("0")
     if lista1[cosa]==1:
         contador+=cosa
-print(contador)
-print(lista1)
+print(f"La suma de los numeros unicos de la lista de {lista} es: {contador}")
