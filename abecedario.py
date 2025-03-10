@@ -1,14 +1,10 @@
 #Solicita al usuario una letra e imprime el resto del abecedario(Incluyendo la letra)
 letra=input("Ingrese una letra:")
-abecedario="abcdefghijklmnopqrstuvwxyz"
-contador=1
-contador2=-1
-contador3=0
+abecedario=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+contador=0
 for a in abecedario:
-    contador3+=1
-    contador2+=contador
     if letra==a:
-        contador-=1
-for e in abecedario[contador2:contador3]:
-    print(e ,end="")
-print("")
+        contador+=1
+    if contador==1:
+        print(a , end="")
+print()
