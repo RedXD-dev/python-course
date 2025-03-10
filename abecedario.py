@@ -1,10 +1,13 @@
 #Solicita al usuario una letra e imprime el resto del abecedario(Incluyendo la letra)
 letra=input("Ingrese una letra:")
 abecedario=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-contador=0
+contador=-1
+contador2=1
+contador3=len(abecedario)
 for a in abecedario:
-    if letra==a:
-        contador+=1
-    if contador==1:
-        print(a , end="")
+    contador+=contador2
+    if ord(letra)-ord(a)==0:
+        contador2-=1
+for e in abecedario[contador:contador3]:
+    print(e,end="")
 print()
