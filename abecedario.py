@@ -3,7 +3,7 @@ letra=input("Ingrese una letra:")
 abecedario=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 contador=-1
 contador2=1
-contador3=len(abecedario)
+contador3=len(abecedario)-1
 for a in abecedario:
     contador+=contador2
     if ord(letra)-ord(a)==0:
