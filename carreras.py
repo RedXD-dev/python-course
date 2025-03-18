@@ -29,5 +29,6 @@ while carrito < int(Longitud):
                 lista.append("_")
             else:
                 print("Tu carrito no puede retroceder")
+                contador-=1
         contador+=1
 print(f"Tu 🚗 le tomo {contador} intentos en llegar al final")
