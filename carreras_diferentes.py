@@ -19,20 +19,36 @@ while dir!="fin":
     f3=["_","_","_","_","_"]
     f4=["_","_","_","_","_"]
     #Se captura la nueva direccion
-    dir=input("Ingrese 'l' para ir a la izquierda o 'u' para subir o 'r' para ir a la derecha o 'b' para bajar o ingrese 'fin' para terminar: ")
+    dir=input("Ingrese 'l' = ← o 'u' = ↑ o 'r' = → o 'b' = ↓ o 'fin' para terminar: ")
 
     #Este if captura cuando va a la izquierda
     if dir=="l":
-        columna-=1
+        if columna!=0:
+            columna-=1
+        else:
+            print("Fuera de alcance")
     #Este elif captura cuando va hacia arriba
     elif dir=="u":
-        fila-=1
+        if fila!=0:
+            fila-=1
+        else:
+            print("Fuera de alcance")
     #Este elif captura cuando va a la derecha
     elif dir=="r":
-        columna+=1
+        if columna!=4:
+            columna+=1
+        else:
+            print("Fuera de alcance")
     #Este elif captura cuando va hacia abajo
     elif dir=="b":
-        fila+=1
+        if fila!=4:
+            fila+=1
+        else:
+            print("Fuera de alcance")
+    elif dir=="fin":
+        print("Gracias")
+    else:
+        print("Invalido")
     #Esta seccion de if's nos ayuda a decidir que lista alterar
     if fila==0:
         f0[columna] = "🚘"
