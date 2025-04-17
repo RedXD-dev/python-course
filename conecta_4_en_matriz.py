@@ -49,32 +49,34 @@ while contador<4:
         
 
     contador1=jugador
-    fila=fila_actual
+    fila=fila_actual 
+    #sirve para contar las fichas de la izquierda
     while jugador>=0 and matriz[fila_actual][jugador]!=" " and matriz[fila_actual][jugador]!= signo_diferente:
         jugador-=1
         contador_izquierda+=1
 
     jugador=contador1
-
+    #sirve para contar las fichas de la derecha
     while jugador<=6 and matriz[fila_actual][jugador]!=" " and matriz[fila_actual][jugador]!= signo_diferente:
             jugador+=1
             contador_derecha+=1
 
     contador_derecha-=1
     jugador=contador1
+    #sirve para contar las fichas de abajo
     while fila<=6 and matriz[fila][jugador]!= signo_diferente:
         fila+=1
         contador_arriba+=1
     contador+=contador_derecha+contador_izquierda
 
-    if contador>=4 :
+    if contador>=4 : #sirve para checar quien gano, solo cuenta las fichas de izquierda y derecha
         print(f"Gano el jugador {signo_actual}")
 
-    elif contador_arriba>=4:
+    elif contador_arriba>=4: #sirve para checar quien gano, solo cuenta las fichas de abajo
         print(f"Gano el jugador {signo_actual}")
         contador=contador_arriba
 
-    else:
+    else: #si no gano se reinicia las fichas
         contador=0
         contador_derecha=0
         contador_izquierda=0
