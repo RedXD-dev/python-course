@@ -40,4 +40,5 @@ def matris(fila,columna):
     flag_columna=columna>=0 and columna<=2
     return flag_fila and flag_columna
 resultado= matris(cosa1,cosa2)
+
 print(resultado)
