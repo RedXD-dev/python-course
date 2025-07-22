@@ -8,9 +8,11 @@ def regresa_cuadrado():
         ["⬛","⬜","⬜","⬜","⬜","⬜","⬛"],
         ["⬛","⬜","⬜","⬜","⬜","⬜","⬛"],
         ["⬛","⬛","⬛","⬛","⬛","⬛","⬛"]
+
     ]
 
     return matriz_cuadrado
+
 def regresa_triangulo():
     matriz_triangulo = [
         ["⬜","⬜","⬜","⬛","⬜","⬜","⬜"],
@@ -20,9 +22,11 @@ def regresa_triangulo():
         ["⬜","⬛","⬜","⬜","⬜","⬛","⬜"],
         ["⬛","⬜","⬜","⬜","⬜","⬜","⬛"],
         ["⬛","⬛","⬛","⬛","⬛","⬛","⬛"]
+
     ]
 
     return matriz_triangulo
+
 def regresa_circulo():
     matriz_circulo = [
         ["⬜","⬜","⬛","⬛","⬛","⬜","⬜"],
@@ -36,6 +40,7 @@ def regresa_circulo():
     ]
 
     return matriz_circulo
+
 def regresa_rectangulo():
     matriz_rectangulo = [
         ["⬛","⬛","⬛","⬛","⬛","⬛","⬛"],
@@ -45,7 +50,9 @@ def regresa_rectangulo():
         ["⬛","⬛","⬛","⬛","⬛","⬛","⬛"]
         
     ]
+    
     return matriz_rectangulo
+
 def regresa_trapecio():
     matriz_trapecio = [
         ["⬛","⬛","⬛","⬛","⬛","⬛","⬛"],
