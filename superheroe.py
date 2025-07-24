@@ -1,8 +1,9 @@
 class Iron_Man:
-    def __init__(self,nombre,altura,año):
+    def __init__(self,nombre,altura,año,nivel_vida):
         self.nombre = nombre
         self.altura = altura
         self.año = año
+        self.nivel_vida = nivel_vida
 
     def volar(self):
         print(f"{self.nombre} esta volando")
@@ -10,14 +11,20 @@ class Iron_Man:
         print(f"{self.nombre} esta disparando")
     def inteligencia(self):
         print(f"{self.nombre} esta pensando y creando una estrategia")
+    def recibir_daño(self):
+        self.nivel_vida-=1
+        print(f"{self.nombre} recibio daño")
+
+        
 nombre_1="Iron Man"
 altura_1=1.85
 año_1="Marzo de 1963"
-personaje=Iron_Man(nombre_1,altura_1,año_1)
+vida=10
+personaje=Iron_Man(nombre_1,altura_1,año_1,vida)
 cosa=0
 while cosa!=-1:
-    menu=int(input("Ingrese '1' = datos o '2' = volar o '3' = disparar o '4' inteligencia o '5' = salir: "))
-    if menu==5:
+    menu=int(input("Ingrese '1' = datos o '2' = volar o '3' = disparar o '4' inteligencia o '5' = recibir daño o '6' mostrar vida o '7' = salir: "))
+    if menu==7:
         print("Gracias")
         cosa=-1
     else:
@@ -29,3 +36,7 @@ while cosa!=-1:
             personaje.disparar()
         elif menu==4:
             personaje.inteligencia()
+        elif menu==5:
+            personaje.recibir_daño()
+        elif menu==6:
+            print(f"{personaje.nombre} tiene {personaje.nivel_vida} de vida")
